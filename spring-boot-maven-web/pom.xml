@@ -31,12 +31,29 @@
 		</dependency>
 	</dependencies>
 
+	<!--这里影响的是将项目打成什么后缀的包,如果修改为jar就是打包成jar包-->
+	<packaging>war</packaging>
+
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+
+			<!--下面是将应用打包发布需要增加的插件-->
+			<!--<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>-->
+
 		</plugins>
 	</build>
 
